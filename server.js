@@ -25,6 +25,10 @@ async function getRandomSong() {
     }
 }
 
+app.get("/", (req, res) => {
+    res.send("🎵 Lyric Match Backend is Running! 🚀");
+});
+
 app.get("/generate-lyric", async (req, res) => {
     try {
         const song = await getRandomSong();
